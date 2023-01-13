@@ -10,3 +10,7 @@ run program:
 
 test program:
 	./project/{{program}}/{{program}}_test
+
+clean:
+	find . -type f -not -name 'justfile' -print0 | xargs -0  -I {} rm -v {}
+	rm -R -- */
