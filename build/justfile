@@ -7,3 +7,6 @@ build:
 
 run program:
 	./project/{{program}}/{{program}}
+
+test program:
+	./project/{{program}}/{{program}}_test
