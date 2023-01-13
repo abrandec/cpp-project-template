@@ -54,21 +54,30 @@ The repository layout is pretty straightforward, including the CMake files to bu
 
 If you activate the `BUILD_TESTING` flag, you need to perform in advance a `conan install` step, just to fetch the `doctest` dependency. Another dependency (OpenSSL) is used in this project as a demonstration of including a third-party library in the process, but it is totally optional and you can activate it only if you run conan in advance.
 
-## How to build from command line
-
-The project can be built using the following commands:
-
-```shell
-cd /path/to/this/project
-mkdir -p build # md build (on Windows)
+## Building
+```
 cd build
-conan install ..
-cmake -DBUILD_TESTING=TRUE -DBUILD_SHARED_LIBS=TRUE ..
-cmake --build .
-cmake --build . --target format
-cmake --build . --target package
+just build
 ```
 
+## Running
+```
+cd build
+just run 'filename'
+```
+
+## Testing
+```
+cd build
+just test 'filename'
+```
+
+## Cleaning
+```
+cd build
+just clean
+```
+#### NEEDS TO BE UPDATED ####
 ## How to build the project using a Docker Environment
 
 ### Linux/gcc
